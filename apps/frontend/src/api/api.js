@@ -80,19 +80,54 @@ export const getFormById = async (formId, authToken) => {
 };
 
 // submit form response fixed one 
+// export const submitFormResponse = async (formId, formData, authToken) => {
+//   try {
+//     const res = await fetch(`${API_BASE_URL}/api/submit-form-response/${formId}`, {
+//       method: "POST",
+//       headers: headers(authToken),
+//       body: JSON.stringify({formData}),
+//     });
+//     return await res.json();
+//   } catch (err) {
+//     console.error("Submit Form Response Error:", err);
+//     return { success: false, message: "Failed to submit form response" };
+//   }
+// }
+
+// windsurf update
 export const submitFormResponse = async (formId, formData, authToken) => {
+  console.log("formData inside api function first", formData);
+  console.log("formid, authtoken", formId, authToken);
   try {
+    const formDataObj = new FormData();
+
+    // Append all fields to formData
+    Object.entries(formData).forEach(([key, value]) => {
+      if (Array.isArray(value)) {
+        value.forEach(item => formDataObj.append(key, item));
+      } else {
+        formDataObj.append(key, value);
+      }
+    });
+    console.log("formData inside api function", formData);
+    console.log("formDataObj", formDataObj);
+
+    // return;
+
     const res = await fetch(`${API_BASE_URL}/api/submit-form-response/${formId}`, {
       method: "POST",
-      headers: headers(authToken),
-      body: JSON.stringify({formData}),
+      headers: {
+        Authorization: `Bearer ${authToken || getToken}`,
+        // Don't set Content-Type, let the browser set it with the boundary
+      },
+      body: formDataObj,
     });
     return await res.json();
   } catch (err) {
     console.error("Submit Form Response Error:", err);
     return { success: false, message: "Failed to submit form response" };
   }
-}
+};
 
 // submit form response new for file upload
 // export const submitFormResponse = async (formId, formData, authToken) => {
