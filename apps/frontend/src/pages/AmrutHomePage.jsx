@@ -24,15 +24,18 @@ const AmrutHomePage = () => {
   const navigate = useNavigate();
 
   const navLinks = [
-    { label: "Home", href: "/", },
-    { label: "Overview", href: "#about", },
-    { label: "Features", href: "#features", },
-    { label: "Download", href: "#downloads", },
-    { label: "Quick Start", href: "#documentation", },
+    { label: "Home", href: "/" },
+    { label: "Overview", href: "#about" },
+    { label: "Features", href: "#features" },
+    { label: "Download", href: "#downloads" },
+    { label: "Quick Start", href: "#documentation" },
     // { label: "Primary Survey", href: "/survey", },
-    { label: "Load Form", href: "/survey/published/xyz-testform", },
-    { label: "FAQs", href: "https://wiki.iirs.gov.in/en/amrut/faq", },
-    { label: "User Forum", href: "https://wiki.iirs.gov.in/en/amrut/user-forum", },
+    { label: "Load Form", href: "/survey/published/6882569307bdb21bbfce214d" },
+    { label: "FAQs", href: "https://wiki.iirs.gov.in/en/amrut/faq" },
+    {
+      label: "User Forum",
+      href: "https://wiki.iirs.gov.in/en/amrut/user-forum",
+    },
   ];
 
   const features = [
@@ -151,7 +154,8 @@ const AmrutHomePage = () => {
           </p>
           <a
             // href={userManualPdf}
-            href="https://wiki.iirs.gov.in/en/amrut" target="_blank"
+            href="https://wiki.iirs.gov.in/en/amrut"
+            target="_blank"
             className="mt-4 bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full"
           >
             View Docs &rarr;
@@ -163,32 +167,127 @@ const AmrutHomePage = () => {
   ];
 
   const tutorials = [
-    { id: "oitluYgDLPU", title: "Tutorial 1: Sankalan 2 QGIS Plugin Installation" },
-    { id: "kKgWdZhiAwM", title: "Tutorial 2: Exporting GIS Data to Mobile App using an existing grid" },
-    { id: "0dsA2lpqsVY", title: "Tutorial 3: Exporting GIS data to mobile app using a new grid" },
-    { id: "K502biXFE6g", title: "Tutorial 4: Installation of Sankalan 2.0 mobile app" },
-    { id: "7-d99FSxsSk", title: "Tutorial 5: Importing AMRUT files in Sankalan 2.0 Mobile App" },
-    { id: "hBo6pzaHOck", title: "Tutorial 6: Vetting and editing attribute data of imported AMRUT file in Sankalan 2.0 mobile app" },
-    { id: "_Y1Y8Ffj_k4", title: "Tutorial 7: Editing and adding point geometry in Sankalan 2.0 Mobile App" },
-    { id: "K5qppFH6b-A", title: "Tutorial 8: Editing and adding line geometry in Sankalan 2.0 Mobile App" },
-    { id: "zxpsnG4rFtI", title: "Tutorial 9: Editing and adding polygon geometry in Sankalan 2.0 Mobile App" },
-    { id: "t2hEvgHY1L8", title: "Tutorial 10: Vetting and editing attribute data of a new feature in Sankalan 2.0 Mobile App" },
-    { id: "2wyiAQ751Es", title: "Tutorial 11: Filtering feature in Sankalan 2.0 Mobile App" },
-    { id: "ldFdDITUTPQ", title: "Tutorial 12: Exporting AMRUT files from Sankalan 2.0 Mobile App to QGIS plugin" },
-    { id: "8BhzqKAfIYw", title: "Tutorial 13: Quality checking of vetted attributes in Sankalan 2.0 QGIS plugin" },
-    { id: "BSDJRdthtvg", title: "Tutorial 14: Reconstruction of vetted attributes in Sankalan 2.0 QGIS plugin" },
-    { id: "5sXJxrV9Nis", title: "Tutorial 15: How to Split a Geometry in the AMRUT Survey File" },
-    { id: "1Ws5SJO6PBM", title: "Tutorial 16: How to Merge Geometry Features in the AMRUT File" },
-    { id: "hvlZbtso1iQ", title: "Tutorial 17: Deleting and Retaining Survey Geometries in AMRUT File " },
-    { id: "ltTr-1Wkjes", title: "Tutorial 18: Applying Attribute Filters and Symbology to AMRUT Layers" },
-    { id: "UkFNIvJn1yQ", title: "Tutorial 19: Exporting Partially Filled AMRUT Grid from Mobile App" },
-    { id: "kcuq7zGZX0w", title: "Tutorial 20: Importing Re-Survey Files into Sankalan 2.0 Mobile Application" },
-    { id: "SWqsbWoETJc", title: "Tutorial 21: Importing and Editing Primary Survey Data in the Mobile Application" },
-    { id: "DS8OpAPFr9Q", title: "Tutorial 22: Export Primary Survey File from Sankalan Mobile Application" },
-    { id: "HkRqGHXSeLQ", title: "Tutorial 23: Getting Started: Sign Up and Log in to the Form Builder Portal" },
-    { id: "CNeXb94owHY", title: "Tutorial 24: Creating a New Primary Survey in Sankalan Form Builder" },
-    { id: "qQ5IGJtAtL4", title: "Tutorial 25: Creation of Survey from Saved Template" },
-    { id: "9i8T01SlINI", title: "Tutorial 26: Primary Survey Export in JSON file" },
+    {
+      id: "oitluYgDLPU",
+      title: "Tutorial 1: Sankalan 2 QGIS Plugin Installation",
+    },
+    {
+      id: "kKgWdZhiAwM",
+      title:
+        "Tutorial 2: Exporting GIS Data to Mobile App using an existing grid",
+    },
+    {
+      id: "0dsA2lpqsVY",
+      title: "Tutorial 3: Exporting GIS data to mobile app using a new grid",
+    },
+    {
+      id: "K502biXFE6g",
+      title: "Tutorial 4: Installation of Sankalan 2.0 mobile app",
+    },
+    {
+      id: "7-d99FSxsSk",
+      title: "Tutorial 5: Importing AMRUT files in Sankalan 2.0 Mobile App",
+    },
+    {
+      id: "hBo6pzaHOck",
+      title:
+        "Tutorial 6: Vetting and editing attribute data of imported AMRUT file in Sankalan 2.0 mobile app",
+    },
+    {
+      id: "_Y1Y8Ffj_k4",
+      title:
+        "Tutorial 7: Editing and adding point geometry in Sankalan 2.0 Mobile App",
+    },
+    {
+      id: "K5qppFH6b-A",
+      title:
+        "Tutorial 8: Editing and adding line geometry in Sankalan 2.0 Mobile App",
+    },
+    {
+      id: "zxpsnG4rFtI",
+      title:
+        "Tutorial 9: Editing and adding polygon geometry in Sankalan 2.0 Mobile App",
+    },
+    {
+      id: "t2hEvgHY1L8",
+      title:
+        "Tutorial 10: Vetting and editing attribute data of a new feature in Sankalan 2.0 Mobile App",
+    },
+    {
+      id: "2wyiAQ751Es",
+      title: "Tutorial 11: Filtering feature in Sankalan 2.0 Mobile App",
+    },
+    {
+      id: "ldFdDITUTPQ",
+      title:
+        "Tutorial 12: Exporting AMRUT files from Sankalan 2.0 Mobile App to QGIS plugin",
+    },
+    {
+      id: "8BhzqKAfIYw",
+      title:
+        "Tutorial 13: Quality checking of vetted attributes in Sankalan 2.0 QGIS plugin",
+    },
+    {
+      id: "BSDJRdthtvg",
+      title:
+        "Tutorial 14: Reconstruction of vetted attributes in Sankalan 2.0 QGIS plugin",
+    },
+    {
+      id: "5sXJxrV9Nis",
+      title: "Tutorial 15: How to Split a Geometry in the AMRUT Survey File",
+    },
+    {
+      id: "1Ws5SJO6PBM",
+      title: "Tutorial 16: How to Merge Geometry Features in the AMRUT File",
+    },
+    {
+      id: "hvlZbtso1iQ",
+      title:
+        "Tutorial 17: Deleting and Retaining Survey Geometries in AMRUT File ",
+    },
+    {
+      id: "ltTr-1Wkjes",
+      title:
+        "Tutorial 18: Applying Attribute Filters and Symbology to AMRUT Layers",
+    },
+    {
+      id: "UkFNIvJn1yQ",
+      title:
+        "Tutorial 19: Exporting Partially Filled AMRUT Grid from Mobile App",
+    },
+    {
+      id: "kcuq7zGZX0w",
+      title:
+        "Tutorial 20: Importing Re-Survey Files into Sankalan 2.0 Mobile Application",
+    },
+    {
+      id: "SWqsbWoETJc",
+      title:
+        "Tutorial 21: Importing and Editing Primary Survey Data in the Mobile Application",
+    },
+    {
+      id: "DS8OpAPFr9Q",
+      title:
+        "Tutorial 22: Export Primary Survey File from Sankalan Mobile Application",
+    },
+    {
+      id: "HkRqGHXSeLQ",
+      title:
+        "Tutorial 23: Getting Started: Sign Up and Log in to the Form Builder Portal",
+    },
+    {
+      id: "CNeXb94owHY",
+      title:
+        "Tutorial 24: Creating a New Primary Survey in Sankalan Form Builder",
+    },
+    {
+      id: "qQ5IGJtAtL4",
+      title: "Tutorial 25: Creation of Survey from Saved Template",
+    },
+    {
+      id: "9i8T01SlINI",
+      title: "Tutorial 26: Primary Survey Export in JSON file",
+    },
   ];
   return (
     <>
@@ -205,7 +304,6 @@ const AmrutHomePage = () => {
                 <h1 className="text-2xl font-bold text-[#2c4964]">
                   SANKALAN 2.0
                 </h1>
-
               </div>
 
               {/* Nav Links - Desktop */}
@@ -215,7 +313,6 @@ const AmrutHomePage = () => {
                     <a
                       key={index}
                       href={link.href}
-
                       className="text-gray-700 hover:text-blue-600 font-medium"
                     >
                       {link.label}
@@ -237,7 +334,9 @@ const AmrutHomePage = () => {
                         className="text-gray-700 hover:text-blue-600 font-medium cursor-pointer"
                       >
                         {link.label}
-                        <sup className="text-[10px] text-yellow-600 font-semibold bg-yellow-100 px-1 py-0.5 rounded">BETA</sup>
+                        <sup className="text-[10px] text-yellow-600 font-semibold bg-yellow-100 px-1 py-0.5 rounded">
+                          BETA
+                        </sup>
                       </a>
                     </span>
                   ) : (
@@ -296,7 +395,6 @@ const AmrutHomePage = () => {
                   //   {link.label}
                   //   {link.label === "Primary Survey" && (<sup className="text-[10px] text-yellow-600 font-semibold bg-yellow-100 px-1 py-0.5 rounded">BETA</sup>)}
                   // </a>
-
                 ))}
               </div>
             )}
@@ -480,10 +578,11 @@ const AmrutHomePage = () => {
                   <button
                     key={index}
                     onClick={() => setActiveTab(index)}
-                    className={`block text-left w-full font-medium transition ${activeTab === index
-                      ? "text-blue-600 border-r-2 border-blue-600 "
-                      : "text-gray-700 hover:text-blue-600"
-                      }`}
+                    className={`block text-left w-full font-medium transition ${
+                      activeTab === index
+                        ? "text-blue-600 border-r-2 border-blue-600 "
+                        : "text-gray-700 hover:text-blue-600"
+                    }`}
                   >
                     {tab.label}
                   </button>
@@ -528,21 +627,39 @@ const AmrutHomePage = () => {
                   allowFullScreen
                 ></iframe> */}
                 {selectedTutorial ? (
-                  <iframe className="w-full h-[315px] rounded" src={`https://www.youtube.com/embed/${selectedTutorial}`} title="Quick Start" allowFullScreen ></iframe>
+                  <iframe
+                    className="w-full h-[315px] rounded"
+                    src={`https://www.youtube.com/embed/${selectedTutorial}`}
+                    title="Quick Start"
+                    allowFullScreen
+                  ></iframe>
                 ) : (
-                  <iframe className="w-full h-[315px] rounded" src="https://www.youtube.com/embed/videoseries?si=iyu_H9REgnRKQUGS&amp;list=PLd2GNPokZWANZvWd9nPHgcJ-xylpIhfKF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  <iframe
+                    className="w-full h-[315px] rounded"
+                    src="https://www.youtube.com/embed/videoseries?si=iyu_H9REgnRKQUGS&amp;list=PLd2GNPokZWANZvWd9nPHgcJ-xylpIhfKF"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen
+                  ></iframe>
                 )}
-
               </div>
               <div className="text-center md:text-left">
                 <div className="bg-white border rounded-lg  overflow-y-auto max-h-[315px]">
                   {tutorials.map((item, index) => (
                     <div
                       key={index}
-                      className={`px-4 py-2 text-sm text-left border-b hover:bg-gray-100 cursor-pointer ${selectedTutorial === item.id ? "bg-blue-50 text-blue-600 font-semibold" : "text-gray-700"}`}
+                      className={`px-4 py-2 text-sm text-left border-b hover:bg-gray-100 cursor-pointer ${
+                        selectedTutorial === item.id
+                          ? "bg-blue-50 text-blue-600 font-semibold"
+                          : "text-gray-700"
+                      }`}
                       onClick={() => setSelectedTutorial(item.id)}
                     >
-                      <span className="font-bold">{item?.title.split(":")[0]}:</span>
+                      <span className="font-bold">
+                        {item?.title.split(":")[0]}:
+                      </span>
                       <span className="ml-1">{item?.title.split(":")[1]}</span>
                     </div>
                   ))}

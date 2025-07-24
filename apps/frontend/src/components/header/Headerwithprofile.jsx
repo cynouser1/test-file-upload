@@ -45,10 +45,13 @@ const Headerwithprofile = () => {
 
   const menuItems = [
     { name: "Home", href: "/" },
-    { name: "Load Form", href: "/survey/published/xyz-testform" },
+    { name: "Load Form", href: "/survey/published/6882569307bdb21bbfce214d" },
     { name: "Login", href: "/auth/signin" },
-    { name: "FAQs", href: "https://wiki.iirs.gov.in/en/amrut/faq", },
-    { name: "User Forum", href: "https://wiki.iirs.gov.in/en/amrut/user-forum", },
+    { name: "FAQs", href: "https://wiki.iirs.gov.in/en/amrut/faq" },
+    {
+      name: "User Forum",
+      href: "https://wiki.iirs.gov.in/en/amrut/user-forum",
+    },
   ];
 
   const profileItems = [
@@ -102,8 +105,12 @@ const Headerwithprofile = () => {
                   key={item.name}
                   href={item.href}
                   target="_blank"
-                  className={`${authToken && item.name === "Login" || !authToken && item.name === "Forms" ? "hidden" : ""
-                    } cursor-pointer text-blue-500 hover:text-blue-600 transition-colors duration-300 font-medium`}
+                  className={`${
+                    (authToken && item.name === "Login") ||
+                    (!authToken && item.name === "Forms")
+                      ? "hidden"
+                      : ""
+                  } cursor-pointer text-blue-500 hover:text-blue-600 transition-colors duration-300 font-medium`}
                 >
                   {item.name}
                 </a>
@@ -113,12 +120,17 @@ const Headerwithprofile = () => {
                   onClick={() => {
                     navigate(item.href);
                   }}
-                  className={`${authToken && item.name === "Login" || !authToken && item.name === "Forms" ? "hidden" : ""
-                    } cursor-pointer text-blue-500 hover:text-blue-600 transition-colors duration-300 font-medium`}
+                  className={`${
+                    (authToken && item.name === "Login") ||
+                    (!authToken && item.name === "Forms")
+                      ? "hidden"
+                      : ""
+                  } cursor-pointer text-blue-500 hover:text-blue-600 transition-colors duration-300 font-medium`}
                 >
                   {item.name}
                 </div>
-              ))}
+              )
+            )}
 
             {/* Profile Dropdown */}
             {authToken && (
@@ -138,8 +150,9 @@ const Headerwithprofile = () => {
                   )}
                   <div className="user ml-2">{user?.name} </div>
                   <svg
-                    className={`ml-1 h-4 w-4 text-gray-500 transition-transform duration-200 ${isProfileOpen ? "transform rotate-180" : ""
-                      }`}
+                    className={`ml-1 h-4 w-4 text-gray-500 transition-transform duration-200 ${
+                      isProfileOpen ? "transform rotate-180" : ""
+                    }`}
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -202,9 +215,13 @@ const Headerwithprofile = () => {
                   onClick={() => {
                     navigate(item.href);
                   }}
-                  className={`${authToken && item.name === "Login" || !authToken && item.name === "Forms" ? "hidden" : ""
+                  className={`${
+                    (authToken && item.name === "Login") ||
+                    (!authToken && item.name === "Forms")
+                      ? "hidden"
+                      : ""
                     // } cursor-pointer block px-3 py-2 text-gray-700 rounded hover:bg-blue-500 hover:text-blue-600`}
-                    } cursor-pointer block px-3 py-2 text-gray-700 rounded hover:bg-blue-50 hover:text-blue-600`}
+                  } cursor-pointer block px-3 py-2 text-gray-700 rounded hover:bg-blue-50 hover:text-blue-600`}
                 >
                   {item.name}
                 </div>

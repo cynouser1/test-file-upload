@@ -21,7 +21,7 @@ export const getProfile = async (req, res) => {
   }
 };
 
-// submit formResponse fixed one 
+// submit formResponse fixed one
 // export const submitFormResponse = async (req, res) => {
 //   const { formId } = req.params;
 //   const { formData } = req.body;
@@ -84,7 +84,7 @@ export const submitFormResponse = async (req, res) => {
     // Process files
     const processedFiles = {};
     if (req.files && req.files.length > 0) {
-      req.files.forEach(file => {
+      req.files.forEach((file) => {
         if (!processedFiles[file.fieldname]) {
           processedFiles[file.fieldname] = [];
         }
@@ -92,11 +92,15 @@ export const submitFormResponse = async (req, res) => {
           filename: file.filename,
           originalname: file.originalname,
           path: file.path,
+          newpath: `/uploads/${file.filename}`,
           mimetype: file.mimetype,
-          size: file.size
+          size: file.size,
         });
       });
     }
+
+    console.log("req.body inside before saving", req.body);
+    console.log("processedFiles inside before saving", processedFiles);
 
     // Combine form data and file data
     const formData = { ...req.body, ...processedFiles };
@@ -122,7 +126,6 @@ export const submitFormResponse = async (req, res) => {
   }
 };
 
-
 // fixing for file upload and formData handling
 // export const submitFormResponse = async (req, res) => {
 //   const { formId } = req.params;
@@ -146,7 +149,6 @@ export const submitFormResponse = async (req, res) => {
 //       // Field is not JSON, keep as-is
 //     }
 //   });
-
 
 //   // Step 3: Attach file paths
 //   if (req.files) {
@@ -191,7 +193,6 @@ export const submitFormResponse = async (req, res) => {
 //       return res.status(401).json({ success: false, message: "Login required to submit this form" });
 //     }
 //     console.log("form", form);
-
 
 //     // Construct formData dynamically
 //     const newformData = { ...req.body };
@@ -257,7 +258,3 @@ export const submitFormResponse = async (req, res) => {
 //     res.status(500).json({ message: "Server error", error, success: false });
 //   }
 // };
-
-
-
-

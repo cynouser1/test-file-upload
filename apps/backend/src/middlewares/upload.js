@@ -4,17 +4,15 @@ import path from "path";
 import fs from "fs";
 import { fileURLToPath } from "url";
 
-
 // Static path setup
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Ensure uploads directory exists
-const uploadDir = path.join(__dirname, "uploads");
+const uploadDir = path.join(__dirname, "..", "..", "uploads");
 if (!fs.existsSync(uploadDir)) {
   fs.mkdirSync(uploadDir);
 }
-
 
 // Ensure uploads folder exists
 // const uploadDir = "uploads/";
@@ -49,10 +47,9 @@ const storage = multer.diskStorage({
 //   files: 5 // Max 5 files per field
 // };
 
-
 // export const upload = multer({ storage });
 export const upload = multer({
   storage,
   // fileFilter,
   // limits
-}).any();  // accept any field 
+}).any(); // accept any field
