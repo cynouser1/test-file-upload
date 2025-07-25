@@ -20,14 +20,6 @@ const formResponseSchema = new mongoose.Schema(
       type: mongoose.Schema.Types.Mixed,
       required: true,
     },
-    files: [{
-      fieldname: String,
-      filename: String,
-      originalname: String,
-      path: String,
-      mimetype: String,
-      size: Number
-    }]
   },
   { timestamps: true }
 );

@@ -92,7 +92,7 @@ export const submitFormResponse = async (req, res) => {
           filename: file.filename,
           originalname: file.originalname,
           path: file.path,
-          newpath: `/uploads/${file.filename}`,
+          dbpath: `/uploads/${file.filename}`,
           mimetype: file.mimetype,
           size: file.size,
         });
